@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+{% stylesheet %}
+  .body
+    {
+      padding: 30px;
+      background: rgba(159, 159, 159, 0.8);
+      width: 90.5%;
+      height: 455px;
+      margin: auto;
+      font-family: besom-2-regular
+    }
+  .tier
+    {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px auto auto auto;
+    }
+  .node
+    {
+      color: #f7f7f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center
+    }
+  .icon
+    {
+      width: 45px;
+      height: 45px;
+      margin-bottom: 10px;
+    }
+  .nodeData
+    {
+      padding: 8px;
+      line-height: 1;
+    }
+  .rotate45
+    {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  .data
+    {
+      font-size: 9pt;
+      color: black;
+    }
+{% endstylesheet %}
+
+        <section class="body">
+
+          <div style= "margin: auto; text-align: center; color: #f7f7f7">
+            <h1 > Transparent Pricing </h1>
+          </div>
+
+          <div style=" display: flex; justify-content: center;  ">
+           <img class="icon rotate45" src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/trainers-64.png?v=1626726465"  alt="Shoe"/>
+          </div>
+
+
+         <div>
+
+           <div style="border-top: 1px dotted #f7f7f7; border-left: 1px dotted #f7f7f7;
+           border-right: 1px dotted #f7f7f7; height: 15px; width: 75%; margin: auto; "/>
+
+           <div style="border-right: 1px dotted #f7f7f7;
+           height:15px; width: 50%"/>
+
+         </div>
+
+
+         <div class="tier" style="width: 100%">
+
+           <div class="node" style="margin-left: -65px;">
+
+             <img style="width: 21px; height: 45px; margin-bottom: 10px; " src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/pngkey.com-person-icon-png-173673.png?v=1626726457"  alt="World Map SVG icons" />
+             <div class="nodeData">
+               AMBASSADOR
+               <br/>
+               <span class="data" >David Marks</span>
+             </div>
+
+           </div>
+
+
+           <div class="node">
+
+             <img class="icon" src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/NicePng_globe-png_334431.png?v=1626724963"  alt="World Map SVG icons" />
+             <div class="nodeData">
+               LOCATION
+               <br/>
+               <span class="data" >Austin, TX</span>
+             </div>
+
+           </div>
+
+
+           <div class="node" style="margin-right: -60px;">
+
+             <img class="icon" src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/dollar_sign.png?v=1626726421"  alt="World Map SVG icons" />
+             <div class="nodeData">
+               RETAIL PRICE
+               <br/>
+               <span class="data" >{{ product.variants[0].price | money_with_currency  }}</span>
+             </div>
+
+           </div>
+
+         </div>
+
+         <div>
+
+           <div style="border-top: 1px dotted white; border-left: 1px dotted white; border-right: 1px dotted white; height:15px; width:50%; margin: auto; margin-top: 10px">
+           </div>
+
+         </div>
+
+
+         <div class="tier" style="width: 50%">
+
+           <div class="node" style="margin-left: -37px;">
+
+             <img class="icon" src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/piggy_bank.png?v=1626726444"  alt="World Map SVG icons" />
+             <div class="nodeData">
+               SAVINGS
+               <br/>
+               <span class="data" >{{ product.variants[0].price | money_with_currency  }}</span>
+             </div>
+
+           </div>
+
+           <div class="node" style="margin-right: -52px;">
+
+             <img class="icon" src="https://cdn.shopify.com/s/files/1/0586/5003/4351/t/1/assets/donation.png?v=1626726431"  alt="World Map SVG icons" />
+             <div class="nodeData">
+               DONATION
+               <br/>
+               <span class="data" >{{ product.variants[0].price | money_with_currency  }}</span>
+             </div>
+
+           </div>
+
+         </div>
+
+       </section>
